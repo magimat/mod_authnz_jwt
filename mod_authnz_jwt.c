@@ -252,7 +252,7 @@ static void *create_auth_jwt_config(apr_pool_t * p, server_rec *s){
 
 static char* getJWTCookie(request_rec *r) {
 
-	char *cookieName = "jwt_token";
+	char *cookieName = "auth_jwt";
 	char *cookie, *tokenizerCtx, *jwt = NULL;
 	char *cookies = apr_pstrdup(r->pool, (char *) apr_table_get(r->headers_in, "Cookie"));
 
